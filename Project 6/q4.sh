@@ -1,0 +1,1 @@
+zcat /home/cs143/data/googlebooks-eng-all-1gram-20120701-s.gz | awk '$2 >= 1900' | datamash --full groupby 1,2 sum 3 | cut -f 1,2,5 | datamash --sort --full groupby 2 max 3 | cut -f 1,2,3

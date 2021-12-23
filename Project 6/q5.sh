@@ -1,0 +1,1 @@
+zcat /home/cs143/data/googlebooks-eng-all-1gram-20120701-s.gz | sed '/_/d' | awk '$2 >= 2000' | datamash --full groupby 1 sum 3 | sort -k 5,5nr | head -10 | cut -f 1,5
